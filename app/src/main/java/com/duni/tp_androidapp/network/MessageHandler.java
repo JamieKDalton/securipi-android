@@ -36,12 +36,4 @@ public class MessageHandler {
             return null;
         }
     }
-
-    public static String handleResponse(String response, String deviceName) {
-        HashMap<String, String> responseData = separateElements(response);
-
-        String resp = responseData.get("resp");
-        String req = responseData.get("req");
-        return "";
-    }
 }
