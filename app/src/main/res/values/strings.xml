@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SecuriPi</string>
+
+    <string name="homescreen_name">SecuriPi: Home Security</string>
+    <string name="connectactivity_name">Add New Device</string>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="custom_name">Name: </string>
+    <string name="device_name">Device: </string>
+    <string name="ip_address">IP: </string>
+
+    <string name="connection_failed">Could not connect to the server</string>
+    <string name="connection_unknown">An unexpected error has occured</string>
+
+    <string name="add_device">Add Device</string>
+    <string name="new_device">New Device</string>
+    <string name="invalid_name_too_long">Device Name is too long!</string>
+    <string name="invalid_name_too_short">Enter a name for the Device</string>
+
+    <string name="invalid_ip_format">Invalid Format, must only be an IPv4 Address</string>
+    <string name="invalid_ip_number">Invalid Input, must contain numbers not characters</string>
+    <string name="invalid_ip_oor">Invalid Input, numbers out of range: between 0 and 255</string>
+
+    <string name="invalid_port_small">Port must be above 2000</string>
+    <string name="invalid_port_format">Port must be a number</string>
+
+    <string name="edit">Edit</string>
+    <string name="remove">Remove</string>
+    <string name="update">Update</string>
+</resources>

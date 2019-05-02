@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/device_custom_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
+            android:textSize="16dp"
+            android:text=""/>
+        <TextView
+            android:id="@+id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
+            android:textSize="16dp"
+            android:text=""/>
+        <TextView
+            android:id="@+id/device_full_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
+            android:textSize="16dp"
+            android:text=""/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Button to Update Data -->
+    <Button
+        android:id="@+id/device_update"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_refresh"
+        style="?android:attr/borderlessButtonStyle"/>
+
+    <!-- Switch for Arm/Disarm -->
+    <Switch
+        android:id="@+id/device_toggle"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"/>
+
+    <!-- Switch for Removing an item -->
+    <Button
+        android:id="@+id/device_more"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_more"
+        style="?android:attr/borderlessButtonStyle"/>
+</LinearLayout>
