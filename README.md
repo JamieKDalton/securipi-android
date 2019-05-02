@@ -1,5 +1,6 @@
 # SecuriPi Android Client
 SecuriPi Android Client for use with SecuriPi Server.
 
-Get the SecuriPi Server for the RaspberryPi here: [insert link]
-Get the SecuriPi Hardware code for the Arduino Uno here: [insert link]
+## Other SecuriPi Resources
+Get the SecuriPi Server for the RaspberryPi here: [SecuriPi Server Repository](https://www.google.com/)
+Get the SecuriPi Hardware code for the Arduino Uno here: [SecuriPi Hardware Code](https://www.google.com/)
