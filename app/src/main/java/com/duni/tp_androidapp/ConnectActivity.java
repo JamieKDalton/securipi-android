@@ -120,6 +120,7 @@ public class ConnectActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 String temp = s.toString();
                 String[] ipArray = temp.split(Pattern.quote("."));
+                boolean errorFound = false;
 
                 if (ipArray.length == 4) {
                     for (int i = 0; i < 4; i++) {
@@ -127,8 +128,7 @@ public class ConnectActivity extends AppCompatActivity {
                             int num = Integer.parseInt(ipArray[i]);
                             if (num < 0 || num > 255) {
                                 // Numbers are out of range
-                                layIpAddress.setError(getString(R.string.invalid_ip_oor));
-                                layIpAddress.setErrorEnabled(true);
+                                errorFound = true;
                             } else {
                                 layIpAddress.setErrorEnabled(false);
                             }
@@ -139,6 +139,10 @@ public class ConnectActivity extends AppCompatActivity {
                     }
                 } else {
                     layIpAddress.setError(getString(R.string.invalid_ip_format));
+                    layIpAddress.setErrorEnabled(true);
+                }
+                if (errorFound) {
+                    layIpAddress.setError(getString(R.string.invalid_ip_oor));
                     layIpAddress.setErrorEnabled(true);
                 }
             }
