@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,10 +31,6 @@ public class ConnectActivity extends AppCompatActivity {
     private Button btnAddDevice;
     private Button btnCancel;
 
-    private EditText txtName;
-    private EditText txtIpAddress;
-    private EditText txtPort;
-
     private TextInputLayout layName;
     private TextInputLayout layIpAddress;
     private TextInputLayout layPort;
@@ -41,10 +38,6 @@ public class ConnectActivity extends AppCompatActivity {
     private String newDeviceName;
     private String newDeviceIpAddress;
     private String newDevicePort;
-
-    private Drawable defNameColour;
-    private Drawable defIpAddressColour;
-    private Drawable defPortColour;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,10 +54,6 @@ public class ConnectActivity extends AppCompatActivity {
         layName = findViewById(R.id.new_device_name_layout);
         layIpAddress = findViewById(R.id.new_device_ip_address_layout);
         layPort = findViewById(R.id.new_device_port_layout);
-
-        txtName = findViewById(R.id.new_device_name);
-        txtIpAddress = findViewById(R.id.new_device_ip_address);
-        txtPort = findViewById(R.id.new_device_port);
 
         btnAddDevice = findViewById(R.id.add_device);
         btnCancel = findViewById(R.id.cancel_add_device);
@@ -178,6 +167,20 @@ public class ConnectActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        switch (id) {
+            case android.R.id.home:
+                Intent intent = new Intent();
+                setResult(Activity.RESULT_CANCELED, intent);
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private boolean validateDataFields() {
